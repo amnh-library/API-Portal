@@ -1,14 +1,26 @@
 # API Portal
 
-[You can find the presentation here.](https://docs.google.com/presentation/d/163vev-7-nU701YB1IRpbRkR4BonHA5CvfoCKCICpUQs/edit?usp=sharing)
+[You can find the original hackathon presentation here.](https://docs.google.com/presentation/d/163vev-7-nU701YB1IRpbRkR4BonHA5CvfoCKCICpUQs/edit?usp=sharing)
+
+## Configuring the API
+
+Before attempting to scrape data or build an ElasticSearch index, you must set the following environment variables:
+
+ELASTICSEARCH_DEV (address of ElasticSearch server)
+OMEKA_API_KEY
+SIERRA_API_KEY
+SIERRA_API_SECRET
 
 ## Connecting to the API
 
-You can connect to the API portal at the following url:
+Before attempting to scrape data or build an ElasticSearch index, you must set the following environment variables:
 
-    http://10.20.40.218:3000/api/v1/<ROUTE>
+ELASTICSEARCH_DEV
 
-You must be on the *internal* **HackTheStacks** network to connect to the URL.
+The Library API is currently only internally available on AMNH servers at this address:
+
+http://api-dev.library.amnh.org/<ROUTE>
+
 
 Substitute `<ROUTE>` with one of the routes listed below.
 

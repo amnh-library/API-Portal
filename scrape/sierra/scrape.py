@@ -1,11 +1,12 @@
 import base64
 import requests
 import json
+import os
 import threading
 
 # auth stuff
-client_key = ''
-client_secret = ''
+client_key = os.environ['SIERRA_API_KEY']
+client_secret = os.environ['SIERRA_API_SECRET']
 
 def get_access_token(client_key, client_secret):
     '''get the oauth access token'''

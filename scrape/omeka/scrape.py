@@ -1,10 +1,11 @@
-omeka_key = ''
-per_page = 50
-
 import requests
 import json
 import math
 import os
+
+omeka_key = os.environ['OMEKA_API_KEY']
+per_page = 50
+
 
 def get_omeka(entity, page):
     uri = "http://lbry-web-007.amnh.org/digital/api/{}/?key={}&page={}".format(entity, omeka_key, page)
