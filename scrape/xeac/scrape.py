@@ -32,3 +32,5 @@ def get_all():
     if not os.path.exists(directory):
         os.makedirs(directory)
     get_stuff(get_record_ids(), directory)
+
+get_all()
