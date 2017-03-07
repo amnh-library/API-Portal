@@ -52,5 +52,5 @@ def upload_to_elastic_search(path, index):
 
 # res = es.search(index="test-index", body={"query": {"match_all": {}}})
 
-for resource in ['files']:
+for resource in ['items', 'exhibit_pages']:
     upload_to_elastic_search('omeka/data/' + resource, 'omeka_' + resource[:-1])

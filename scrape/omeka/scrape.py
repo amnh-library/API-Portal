@@ -44,5 +44,5 @@ def get_all(entity):
 
         print page / pages
 
-for resource in ['collections', 'items', 'exhibits', 'exhibit_pages']:
+for resource in ['items', 'exhibit_pages']:
     get_all(resource)
