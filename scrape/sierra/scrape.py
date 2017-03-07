@@ -12,18 +12,22 @@ def get_access_token(client_key, client_secret):
     '''get the oauth access token'''
     response = get_auth(client_key, client_secret)
     r = json.loads(response.text)
+
     return r['access_token']
 
 def get_auth(client_key,client_secret):
     '''get auth'''
     encoded = get_encoded(client_key, client_secret)
     url = 'https://libcat1.amnh.org/iii/sierra-api/v3/token'
+
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
         'Authorization': 'Basic ' + str(encoded)[2:-1]
     }
+
     payload={'grant_type': 'client_credentials'}
     response = requests.post(url, data=payload, headers=headers)
+
     return response
 
 def get_encoded(client_key,client_secret):
@@ -32,11 +36,13 @@ def get_encoded(client_key,client_secret):
     client_key_and_secret = str(client_key + ':' + client_secret)
     b_client_key_and_secret = client_key_and_secret.encode('utf-8')
     encoded = base64.b64encode(b_client_key_and_secret)
+
     return encoded
 
 # request stuff
 def get(url, access_token):
     headers = {'Authorization': 'Bearer ' + access_token}
+
     return requests.get(url, headers=headers)
 
 # search stuff
@@ -45,12 +51,14 @@ def get_results(url, entity, access_token, offset):
     response is json'''
     url = "{}/{}/?limit=2000&offset={}".format(url, entity, offset)
     response = get(url, access_token)
+
     return json.loads(response.text)
 
 def save_results(results, directory):
     for datum in results:
         id = datum['id']
         path = '{}/{}.json'.format(directory, id)
+
         with open(path, 'w+') as f:
             js_data = json.dumps(datum)
             f.write(js_data)
@@ -58,6 +66,7 @@ def save_results(results, directory):
 def get_and_save_results(base_url, access_token, offset):
     results = get_results(base_url, 'bibs', access_token, offset)
     save_results(results['entries'], 'sierra/data/bibs')
+
     print "saved offset: {}".format(offset)
 
 
