@@ -63,9 +63,16 @@ def save_results(results, directory):
             js_data = json.dumps(datum)
             f.write(js_data)
 
+
 def get_and_save_results(base_url, access_token, offset):
     results = get_results(base_url, 'bibs', access_token, offset)
-    save_results(results['entries'], 'sierra/data/bibs')
+
+    directory = 'sierra/data/bibs'
+
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    save_results(results['entries'], directory)
 
     print "saved offset: {}".format(offset)
 
