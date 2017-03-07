@@ -22,7 +22,7 @@ def get_auth(client_key,client_secret):
 
     headers = {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': 'Basic ' + str(encoded)[2:-1]
+        'Authorization': 'Basic ' + str(encoded)
     }
 
     payload={'grant_type': 'client_credentials'}
@@ -82,4 +82,9 @@ threads = []
 for i in range(6):
     t = threading.Thread(target=lambda: get_and_save_range(base_url, access_token, i * 34000, 17))
     threads.append(t)
-    t.start()
+
+for thr in threads:
+  thr.start()
+
+for thr in threads:
+  thr.join()
