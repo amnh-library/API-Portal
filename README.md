@@ -6,7 +6,10 @@
 
 Before attempting to scrape data or build an ElasticSearch index, you must set the following environment variables:
 
-* ELASTICSEARCH_DEV (address of ElasticSearch server)
+* DEV_APISERVER_HOST
+* DEV_APISERVER_PORT
+* DEV_APISERVER_ALTPORT
+* ELASTICSEARCH_DEV_HOST
 * OMEKA_API_KEY
 * SIERRA_API_KEY
 * SIERRA_API_SECRET

@@ -11,6 +11,9 @@ var API_V1 = require('./routes/API_V1');
 var app = express();
 
 // view engine setup
+app.set('domain', process.env.DEV_APISERVER_HOST);
+app.set('port', process.env.DEV_APISERVER_PORT || process.env.DEV_APISERVER_ALTPORT);
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.set('json spaces', 4);

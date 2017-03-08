@@ -6,7 +6,9 @@ from os.path import isfile, join
 import re
 from datetime import datetime
 from elasticsearch import Elasticsearch
-es = Elasticsearch(os.environ['ELASTICSEARCH_DEV'])
+
+dev_elasticsearch = 'http://' + os.environ['DEV_ELASTICSEARCH_HOST'] + ':' + os.environ['DEV_ELASTICSEARCH_PORT']
+es = Elasticsearch(dev_elasticsearch)
 
 def load(path):
     # results = []

@@ -82,7 +82,7 @@ def get_and_save_range(base_url, access_token, offset, pages):
         get_and_save_results(base_url, access_token, i * 2000 + offset)
 
 base_url = 'https://libcat1.amnh.org/iii/sierra-api/v3'
-# access token wasn't working... not sure why
+
 access_token = get_access_token(client_key, client_secret)
 threads = []
 
