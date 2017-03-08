@@ -1,6 +1,6 @@
 var _ = require('lodash');
 
-const BASE = 'http://10.20.40.218:9200';
+const BASE = 'http://' + os.environ['DEV_ELASTICSEARCH_HOST'] + ':' + os.environ['DEV_ELASTICSEARCH_PORT']
 
 const _getBody = (query, size) => {
   return JSON.stringify({
