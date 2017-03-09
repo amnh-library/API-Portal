@@ -9,7 +9,7 @@ const SOURCE = 'dspace';
 const SEARCH_PATHS = [
   'dspace_item',
   'dspace_collection',
-  'dspace_community',
+  'dspace_communitie',
 ];
 const SIZE = 200;
 

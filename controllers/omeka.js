@@ -7,10 +7,11 @@ var elasticSearch = require('./elasticSearch.js');
 
 const SOURCE = 'omeka';
 const SEARCH_PATHS = [
-  'item',
-  'collection',
-  'exhibit',
-  'element',
+  'omeka_item',
+  'omeka_exhibit_page',
+//  'collection',
+//  'exhibit',
+//  'element',
 ];
 const SIZE = 200;
 
