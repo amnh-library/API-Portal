@@ -26,6 +26,8 @@ const getOptions = (query, size, flexible) => ({
 const getSearchURIs = paths => paths.map(p => `${BASE}/${p}/_search`);
 
 const getResults = (jsonList, source) => {
+  console.log(jsonList);
+
   const hitsList = jsonList.map(json => json.hits.hits);
   const mergedResults = [].concat.apply([], hitsList);
   const sortedResults = _.sortBy(mergedResults, '_score').reverse();

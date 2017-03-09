@@ -5,11 +5,9 @@ var fetch = require('node-fetch');
  */
 
 const SOURCE = 'archives-space';
-const SEARCH_BASE =
-  'http://lbry-web-006.amnh.org:8089/repositories/3/search?page=1';
+const SEARCH_BASE = 'http://lbry-web-006.amnh.org:8089/repositories/3/search?page=1';
 const SESSION_HEADER = 'X-ArchivesSpace-Session';
-const PEOPLE_QUERYSTRING =
-  'filter_term%5B%5D=%7B"primary_type"%3A"agent_person"%7D';
+const PEOPLE_QUERYSTRING = 'filter_term%5B%5D=%7B"primary_type"%3A"agent_person"%7D';
 const LOGIN_BASE = 'http://lbry-web-006.amnh.org:8089/users/ehammer/login';
 const LOGIN_HEADERS = {'Content-Type': 'application/x-www-form-urlencoded'};
 
