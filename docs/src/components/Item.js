@@ -27,7 +27,7 @@ export default class Item extends Component {
   }
 
   fetch() {
-    fetch(`http://10.20.40.218:3000/api/v1/${this.props.entities}/${this.props.id}`)
+    fetch(`http://api-dev.library.amnh.org/api/v1/${this.props.entities}/${this.props.id}`)
       .then(response => response.json())
       .then(response => response[singular(this.props.entities)])
       .then(item => this.setState({ item }));
