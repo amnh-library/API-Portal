@@ -31,7 +31,7 @@ const filterQueryParams = (params) => (entity) => {
 
 const search = (query) => {
   return Promise.all([
-    aspace.search(query),
+//    aspace.search(query),
     omeka.imageSearch(query),
     dspace.search(query),
     omeka.search(query),
