@@ -9,9 +9,6 @@ const SOURCE = 'omeka';
 const SEARCH_PATHS = [
   'omeka_item',
   'omeka_exhibit_page',
-//  'collection',
-//  'exhibit',
-//  'element',
 ];
 const SIZE = 200;
 
