@@ -5,8 +5,8 @@ var path = require('path');
 
 const mapEntity = (entities) => {
   return entities.map(entity => {
-    entity.id = entity['exac_id'];
-    delete entity['exac_id'];
+    entity.id = entity['xeac_id'];
+    delete entity['xeac_id'];
     return entity;
   });
 };
@@ -26,3 +26,4 @@ exports.getPeople = getCSV('person');
 exports.getExpeditions = getCSV('expedition');
 exports.getExhibitions = getCSV('exhibition');
 exports.getDepartments = getCSV('department');
+exports.getHalls = getCSV('halls');

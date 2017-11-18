@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node --debug ./bin/www"
+    "start": "node --inspect ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.2",
