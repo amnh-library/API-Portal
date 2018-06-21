@@ -17,7 +17,7 @@ Before attempting to scrape data or build an ElasticSearch index, you must set t
 ## Connecting to the API
 
 The Library API is currently only internally available on AMNH servers at this address:
-`https://api-dev.library.amnh.org/<ROUTE>`
+`https://api-dev.library.amnh.org/api/v1<ROUTE>`
 
 Substitute `<ROUTE>` with one of the routes listed below.
 
